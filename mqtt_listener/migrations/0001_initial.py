@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('hop_limit', models.IntegerField(blank=True, null=True)),
                 ('hop_start', models.IntegerField(blank=True, null=True)),
                 ('message_type', models.CharField(blank=True, db_index=True, help_text='Typ aus dem JSON (z.B. position, telemetry, text)', max_length=50, null=True)),
-                ('raw_json_payload', models.JSONField(help_text='Die gesamte JSON-Payload der Nachricht')),
+                ('raw_json_payload', models.JSONField(help_text='Die gesamte JSON-Payload der Message')),
             ],
             options={
                 'ordering': ['-timestamp_mqtt'],
@@ -82,7 +82,7 @@ class Migration(migrations.Migration):
                 ('precision_bits', models.IntegerField(blank=True, null=True)),
                 ('sats_in_view', models.IntegerField(blank=True, null=True)),
                 ('pdop', models.FloatField(blank=True, null=True)),
-                ('timestamp_device', models.DateTimeField(blank=True, help_text='Zeitstempel der Position vom Gerät (UTC)', null=True)),
+                ('timestamp_device', models.DateTimeField(blank=True, help_text='Zeitstempel der Position vom Device (UTC)', null=True)),
                 ('packet', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='position_data', to='mqtt_listener.messagepacket')),
             ],
         ),

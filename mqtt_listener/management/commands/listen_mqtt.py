@@ -69,7 +69,7 @@ def decimal_degrees(degrees_i):
 def get_or_create_node_from_id(node_id_any_format, long_name=None, short_name=None, hw_model_int=None, role_int=None):
     """
     Sucht oder erstellt einen Node anhand seiner ID (Dezimal oder Hex '!...').
-    Aktualisiert optional Node-Informationen und stellt sicher, dass beide ID-Formate (dez/hex) gespeichert werden.
+    Aktualisiert optional Node-Information und stellt sicher, dass beide ID-Formate (dez/hex) gespeichert werden.
     """
     node = None
     created = False
@@ -133,7 +133,7 @@ def get_or_create_node_from_id(node_id_any_format, long_name=None, short_name=No
         # Eine explizite Zuweisung hier ist meist nicht mehr nötig, außer zur Korrektur von Inkonsistenzen.
 
     if node:
-        # Node-Informationen aktualisieren (Name, Hardware, Rolle)
+        # Node-Information aktualisieren (Name, Hardware, Rolle)
         if long_name and node.long_name != long_name:
             node.long_name = long_name
             updated_fields['long_name'] = True
@@ -289,7 +289,7 @@ class Command(BaseCommand):
                                 try:
                                     ts_device_utc = datetime.fromtimestamp(ts_device_unix, tz=dt_timezone.utc)
                                 except (OSError, OverflowError, TypeError,
-                                        ValueError) as e:  # Fehler bei ungültigem Timestamp abfangen
+                                        ValueError) as e:  # Error bei ungültigem Timestamp abfangen
                                     self.stdout.write(
                                         f"    Invalid device timestamp for position: {ts_device_unix}, error: {e}")
 
@@ -404,7 +404,7 @@ class Command(BaseCommand):
                 client.disconnect()
                 client.loop_stop()  # Wichtig, um den Netzwerk-Thread sauber zu beenden
             elif not hasattr(client, 'is_connected'):  # Ältere paho-mqtt Versionen
-                client.disconnect()  # Hier könnte es einen Fehler geben, wenn nicht verbunden
+                client.disconnect()  # Hier könnte es einen Error geben, wenn nicht verbunden
                 client.loop_stop()
 
             self.stdout.write(self.style.WARNING("MQTT connection disconnected and loop stopped."))

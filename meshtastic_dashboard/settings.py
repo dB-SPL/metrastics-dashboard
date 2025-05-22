@@ -149,7 +149,7 @@ STATIC_ROOT = '/var/www/meshtastic_app/staticfiles' # Verzeichnis für 'collects
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # MQTT Broker Settings (WICHTIG für listen_mqtt.py)
-# Diese Einstellungen müssen Sie an Ihren MQTT-Broker anpassen.
+# Diese Settings müssen Sie an Ihren MQTT-Broker anpassen.
 # Die Namen der Variablen (MQTT_BROKER_HOST etc.) sind Beispiele.
 # Ihr listen_mqtt.py Skript muss diese Variablen dann auch verwenden (z.B. via django.conf.settings).
 MQTT_BROKER = 'localhost'  # z.B. 'localhost' oder eine IP/Domain
@@ -193,7 +193,7 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         },
-        # 'mail_admins': { # Aktivieren, um Fehler per E-Mail zu erhalten
+        # 'mail_admins': { # Aktivieren, um Error per E-Mail zu erhalten
         #     'level': 'ERROR',
         #     'class': 'django.utils.log.AdminEmailHandler',
         #     'formatter': 'verbose',
@@ -217,8 +217,8 @@ LOGGING = {
     },
 }
 
-# E-Mail-Einstellungen (für Admin-Fehlerberichte und andere Benachrichtigungen)
-# Ersetzen Sie diese durch Ihre tatsächlichen E-Mail-Server-Einstellungen
+# E-Mail-Settings (für Admin-Fehlerberichte und andere Benachrichtigungen)
+# Ersetzen Sie diese durch Ihre tatsächlichen E-Mail-Server-Settings
 # ADMINS = [('Ihr Name', 'ihre-email@example.com')] # Für Fehlerberichte
 # MANAGERS = ADMINS
 
@@ -229,10 +229,10 @@ LOGGING = {
 # EMAIL_HOST_USER = 'ihr-smtp-benutzer@example.com'
 # EMAIL_HOST_PASSWORD = 'ihr-smtp-passwort'
 # DEFAULT_FROM_EMAIL = 'webmaster@metrastics.com'
-# SERVER_EMAIL = 'server-errors@metrastics.com' # Absender für Fehler-E-Mails
+# SERVER_EMAIL = 'server-errors@metrastics.com' # Absender für Error-E-Mails
 
 # CSRF-Schutz für HTTPS
-# Wenn Sie HTTPS verwenden (was dringend empfohlen wird), sind diese Einstellungen wichtig.
+# Wenn Sie HTTPS verwenden (was dringend empfohlen wird), sind diese Settings wichtig.
 # SESSION_COOKIE_SECURE = True # Nur über HTTPS senden
 # CSRF_COOKIE_SECURE = True    # Nur über HTTPS senden
 # SECURE_SSL_REDIRECT = True   # Alle HTTP-Anfragen auf HTTPS umleiten (wenn der Proxy dies nicht bereits tut)

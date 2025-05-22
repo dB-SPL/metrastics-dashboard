@@ -87,9 +87,9 @@
                 }
             })
             .catch(error => {
-                console.error("Fehler beim Laden der Positionsdaten:", error);
+                console.error("Error beim Laden der Positionsdaten:", error);
                 var errorDiv = document.createElement('div');
-                errorDiv.innerHTML = '<p class="text-center m-3 text-danger">Fehler beim Laden der Positionsdaten für die Karte.</p>';
+                errorDiv.innerHTML = '<p class="text-center m-3 text-danger">Error beim Laden der Positionsdaten für die Karte.</p>';
                 document.getElementById('map').parentNode.insertBefore(errorDiv, document.getElementById('map').nextSibling);
             });
     });

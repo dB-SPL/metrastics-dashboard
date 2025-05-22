@@ -47,7 +47,7 @@
             </div>
 
             {% if last_position %}
-                <h5 class="mt-3"><i class="fas fa-map-marker-alt me-2"></i>Letzte bekannte Position & gehörte Nachbarn</h5>
+                <h5 class="mt-3"><i class="fas fa-map-marker-alt me-2"></i>Last bekannte Position & gehörte Nachbarn</h5>
                 <div id="nodeMap"></div>
             {% else %}
                 <div class="alert alert-info mt-3" role="alert">
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (focusAltitude !== 'N/A') {
         focusPopupContent += "Höhe: " + focusAltitude + "m<br>";
     }
-    focusPopupContent += "Zeitstempel (Gerät): " + focusPositionTimestamp;
+    focusPopupContent += "Zeitstempel (Device): " + focusPositionTimestamp;
     focusMarker.bindPopup(focusPopupContent).openPopup();
 
     // --- NEU: Gehörte Nachbarn und Linien zeichnen ---
@@ -179,8 +179,8 @@ document.addEventListener('DOMContentLoaded', function () {
             map.fitBounds(L.latLngBounds(allLatLngs).pad(0.15)); // Zoomt auf alle Marker mit etwas Abstand
         }
     }
-    // --- Ende NEU ---
+    // --- End NEU ---
 });
 </script>
-{% endif %} {# Ende if last_position #}
+{% endif %} {# End if last_position #}
 {% endblock %}

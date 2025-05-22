@@ -57,7 +57,7 @@ class MessagePacket(models.Model):
     hop_start = models.IntegerField(null=True, blank=True)
 
     message_type = models.CharField(max_length=50, blank=True, null=True, db_index=True, help_text="Typ aus dem JSON (z.B. position, telemetry, text)")
-    raw_json_payload = models.JSONField(help_text="Die gesamte JSON-Payload der Nachricht")
+    raw_json_payload = models.JSONField(help_text="Die gesamte JSON-Payload der Message")
 
     @property
     def is_broadcast(self):
@@ -93,7 +93,7 @@ class Position(models.Model):
     precision_bits = models.IntegerField(null=True, blank=True)
     sats_in_view = models.IntegerField(null=True, blank=True)
     pdop = models.FloatField(null=True, blank=True)
-    timestamp_device = models.DateTimeField(null=True, blank=True, help_text="Zeitstempel der Position vom Gerät (UTC)")
+    timestamp_device = models.DateTimeField(null=True, blank=True, help_text="Zeitstempel der Position vom Device (UTC)")
 
     def __str__(self):
         return f"Position for {self.packet.from_node} ({self.latitude:.5f}, {self.longitude:.5f})"
