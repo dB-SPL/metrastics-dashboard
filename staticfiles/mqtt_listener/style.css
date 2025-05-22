@@ -1,41 +1,40 @@
-/* Allgemeine Stile */
+/* General styles */
 body {
-    font-family: 'Open Sans', sans-serif; /* Beispiel für eine moderne Schriftart */
-    background-color: #f4f7f6; /* Ein sehr heller, neutraler Hintergrund als Alternative zur Basisfarbe */
-    color: #333; /* Standardtextfarbe */
+    font-family: 'Open Sans', sans-serif; /* Example of a modern font */
+    background-color: #f4f7f6; /* A very light, neutral background as an alternative to the base color */
+    color: #333; /* Standard text color */
 }
 
-/* Navbar Anpassung (Beispiel, basierend auf Bootstrap) */
-.navbar-dark.bg-dark { /* In base.html vorhanden */
-    background-color: #283044 !important; /* Ihre Basisfarbe */
+/* Navbar customization (example, based on Bootstrap) */
+.navbar-dark.bg-dark { /* Present in base.html */
+    background-color: #283044 !important; /* Your base color */
 }
 
-/* Karten-Header (Beispiel für viele Ihrer Templates wie dashboard_overview.html, node_detail.html, node_list.html) */
+/* Card header (example for many of your templates like dashboard_overview.html, node_detail.html, node_list.html) */
 .card-header {
-    background-color: #78A1BB; /* Ihre Sekundärfarbe */
-    color: white; /* Guter Kontrast zu Hellblau */
+    background-color: #78A1BB; /* Your secondary color */
+    color: white; /* Good contrast to light blue */
 }
 
-.card-header.bg-primary { /* Überschreiben von Bootstrap-Primärfarben, falls nötig */
+.card-header.bg-primary { /* Override Bootstrap primary colors if necessary */
     background-color: #283044 !important;
     color: white;
 }
 
-.card-header.bg-secondary { /* Überschreiben von Bootstrap-Sekundärfarben, falls nötig */
+.card-header.bg-secondary { /* Override Bootstrap secondary colors if necessary */
     background-color: #78A1BB !important;
-    color: #283044; /* Dunkler Text auf hellerem Blau */
+    color: #283044; /* Dark text on lighter blue */
 }
-
 
 /* Buttons */
 .btn-primary {
     background-color: #78A1BB;
     border-color: #78A1BB;
-    color: #283044; /* Dunklerer Text für besseren Kontrast */
+    color: #283044; /* Darker text for better contrast */
 }
 
 .btn-primary:hover {
-    background-color: #608a9e; /* Etwas dunklere Variante für Hover */
+    background-color: #608a9e; /* Slightly darker variant for hover */
     border-color: #608a9e;
 }
 
@@ -58,38 +57,17 @@ a:hover {
     color: #608a9e;
 }
 
-/* Akzente mit der Tertiärfarbe */
-.text-muted { /* Bestehende Bootstrap-Klasse anpassen oder neue erstellen */
+/* Accents with the tertiary color */
+.text-muted { /* Modify existing Bootstrap class or create new one */
     color: #BFA89E !important;
 }
 
-.border-top { /* z.B. im Footer in base.html */
+.border-top { /* e.g., in the footer in base.html */
     border-top: 1px solid #BFA89E !important;
 }
 
-/* Spezifische Elemente für ein modernes Aussehen */
+/* Specific elements for a modern appearance */
 .card {
-    border: none; /* Entfernt Ränder für einen flacheren Look, wenn gewünscht */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtiler Schatten für Tiefe */
+    border: none; /* Removes borders for a flatter look, if desired */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
 }
-
-/* Beispielhafte Anpassung für Tabellen wie in node_list.html */
-.table thead.table-light {
-    background-color: #e9ecef; /* Standard Bootstrap hell, könnte auch Ihre Tertiärfarbe sein */
-    color: #283044; /* Basisfarbe als Text */
-}
-
-/* Anpassungen für Status-Dots oder Badges */
-.badge.bg-primary {
-    background-color: #78A1BB !important; /* Sekundärfarbe für primäre Badges */
-    color: #283044 !important;
-}
-.badge.bg-success {
-    background-color: #a3cca3 !important; /* Beispiel für ein modernes Grün, anpassbar */
-    color: #283044 !important;
-}
-.badge.bg-info {
-    background-color: #BFA89E !important; /* Tertiärfarbe für Info-Badges */
-    color: #283044 !important;
-}
-/* Fügen Sie weitere Anpassungen für andere .badge Typen hinzu */
